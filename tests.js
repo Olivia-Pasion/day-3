@@ -6,6 +6,9 @@ import {
     areaOfTriangle,
     comparison,
     greaterThan,
+    even,
+    odd,
+    /*formatName,*/
 } from './functions.js';
 
 const test = QUnit.test;
@@ -160,6 +163,27 @@ test('Greater than 100', (expect) => {
     if(num % 2 === 0)
 */
 
+test('even numbers', (expect) => {
+
+    const x = 2;
+    const expected = 'even';
+
+    const actual = even(x);
+
+    expect.equal(actual, expected);
+
+
+});
+
+test('odd numbers', (expect) => {
+    const x = 5;
+    const expected = 'odd';
+
+    const actual = odd(x);
+
+    expect.equal(actual, expected);
+});
+
 /* 
     Write a function that takes two rock-paper-scissors throws
     and returns 'player 1' if first throw wins, 
@@ -185,6 +209,19 @@ test('Greater than 100', (expect) => {
     Uses: let variable with reassignment, string concatenation, 
     existence comparison operator, if control flow
 */
+
+/*test('formats a two part name', (expect) => {
+
+    const first = 'Ruth';
+    const last = 'Ginsburg';
+    const middle = 'Bader';
+
+    const actual = formatName(first, last);
+
+    expect.equal(formatName(first, last), 'Ruth Ginsburg');
+    expect.equal(formatName(first, last, middle,), 'Ruth Bader Ginsburg');
+
+});*/
 
 /* 
     Write a function that takes a name, type, age, food, and a toys array
