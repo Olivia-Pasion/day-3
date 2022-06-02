@@ -1,6 +1,14 @@
 // IMPORT MODULES under test here:
 import {
     add,
+    subtract,
+    multiply,
+    areaOfTriangle,
+    comparison,
+    greaterThan,
+    even,
+    odd,
+    formatName,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -38,6 +46,20 @@ test('adds two numbers', (expect) => {
 
     Uses: Math operator
 */
+test('subtracts two numbers', (expect) => {
+    // Arrange
+    const x = 12;
+    const y = 8;
+    const expected = 4;
+
+    // Act
+    const actual = subtract(x, y);
+
+    //Expect
+    expect.equal(actual, expected);
+  
+});
+
 
 /* 
     Write a function that takes in number of minutes
@@ -48,6 +70,21 @@ test('adds two numbers', (expect) => {
     Uses: Math operator(s)
 */
 
+test('minutes to seconds', (expect) => {
+
+    // Arrange
+    const x = 10;
+    const y = 60;
+    const expected = 600;
+
+    // Act
+    const actual = multiply(x, y);
+
+    // Expect
+    expect.equal(actual, expected);
+
+});
+
 /* 
     Write a function that takes in the base and height
     of a triangle and returns its area (google it)
@@ -56,6 +93,21 @@ test('adds two numbers', (expect) => {
 
     Uses: Math operator(s)
 */
+
+test('area of triangle', (expect) => {
+
+    //Arrange
+    const b = 5;
+    const h = 10;
+    const expected = 25;
+
+    //Act
+    const actual = areaOfTriangle(b, h);
+
+    //Expect
+    expect.equal(actual, expected);
+
+});
 
 /* 
     Write a function that takes in two 2 numbers
@@ -67,7 +119,37 @@ test('adds two numbers', (expect) => {
     88, 60 --> false
 
     Uses: Comparison operator(s), if/else control flow
+        <,>,=
+
+    if (sum < 100) {
+        return true;
+    }
 */
+
+test('Less than 100', (expect) => {
+
+    const x = 25;
+    const y = 13;
+    const expected = true;
+
+    //act
+
+    const actual = comparison(x, y);
+
+    //expect
+    expect.equal(actual, expected);
+});
+
+test('Greater than 100', (expect) => {
+
+    const x = 88;
+    const y = 90;
+    const expected = false;
+
+    const actual = greaterThan(x, y);
+
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes a number and
@@ -77,7 +159,30 @@ test('adds two numbers', (expect) => {
     6 --> 'even'
 
     Uses: modulo operator (remainder), comparison operator, if/else control flow
+
+    if(num % 2 === 0)
 */
+
+test('even numbers', (expect) => {
+
+    const x = 2;
+    const expected = 'even';
+
+    const actual = even(x);
+
+    expect.equal(actual, expected);
+
+
+});
+
+test('odd numbers', (expect) => {
+    const x = 5;
+    const expected = 'odd';
+
+    const actual = odd(x);
+
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes two rock-paper-scissors throws
@@ -104,6 +209,20 @@ test('adds two numbers', (expect) => {
     Uses: let variable with reassignment, string concatenation, 
     existence comparison operator, if control flow
 */
+
+test('formats a three part name', (expect) => {
+
+    const first = 'Ruth';
+    const last = 'Ginsburg';
+    const middle = 'Bader';
+    const expected = 'Ruth Bader Ginsburg';
+
+    const actual = formatName(first, last, middle);
+
+    expect.equal(actual, expected);
+    
+
+});
 
 /* 
     Write a function that takes a name, type, age, food, and a toys array
