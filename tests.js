@@ -3,6 +3,7 @@ import {
     add,
     subtract,
     multiply,
+    areaOfTriangle,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -87,6 +88,21 @@ test('minutes to seconds', (expect) => {
 
     Uses: Math operator(s)
 */
+
+test('area of triangle', (expect) => {
+
+    //Arrange
+    const b = 5;
+    const h = 10;
+    const expected = 25;
+
+    //Act
+    const actual = areaOfTriangle(b, h);
+
+    //Expect
+    expect.equal(actual, expected);
+
+});
 
 /* 
     Write a function that takes in two 2 numbers
