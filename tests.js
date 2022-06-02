@@ -2,6 +2,7 @@
 import {
     add,
     subtract,
+    multiply,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -41,9 +42,9 @@ test('adds two numbers', (expect) => {
 */
 test('subtracts two numbers', (expect) => {
     // Arrange
-    const x = 9;
-    const y = 3;
-    const expected = 6;
+    const x = 12;
+    const y = 8;
+    const expected = 4;
 
     // Act
     const actual = subtract(x, y);
@@ -62,6 +63,21 @@ test('subtracts two numbers', (expect) => {
 
     Uses: Math operator(s)
 */
+
+test('minutes to seconds', (expect) => {
+
+    // Arrange
+    const x = 10;
+    const y = 60;
+    const expected = 600;
+
+    // Act
+    const actual = multiply(x, y);
+
+    // Expect
+    expect.equal(actual, expected);
+
+});
 
 /* 
     Write a function that takes in the base and height
