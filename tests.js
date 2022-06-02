@@ -4,6 +4,8 @@ import {
     subtract,
     multiply,
     areaOfTriangle,
+    comparison,
+    greaterThan,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -114,7 +116,37 @@ test('area of triangle', (expect) => {
     88, 60 --> false
 
     Uses: Comparison operator(s), if/else control flow
+        <,>,=
+
+    if (sum < 100) {
+        return true;
+    }
 */
+
+test('Less than 100', (expect) => {
+
+    const x = 25;
+    const y = 13;
+    const expected = true;
+
+    //act
+
+    const actual = comparison(x, y);
+
+    //expect
+    expect.equal(actual, expected);
+});
+
+test('Greater than 100', (expect) => {
+
+    const x = 88;
+    const y = 90;
+    const expected = false;
+
+    const actual = greaterThan(x, y);
+
+    expect.equal(actual, expected);
+});
 
 /* 
     Write a function that takes a number and
@@ -124,6 +156,8 @@ test('area of triangle', (expect) => {
     6 --> 'even'
 
     Uses: modulo operator (remainder), comparison operator, if/else control flow
+
+    if(num % 2 === 0)
 */
 
 /* 
