@@ -41,14 +41,14 @@ export function odd(x) {
         return false;
     }
 }
-/*export function formatName(first, last, middle) {
+export function formatName(first, last, middle) {
 
     if (middle){
-    return first + ' ' + middle + ' ' + last;
+        return first + ' ' + middle + ' ' + last;
     }
 
     return first + ' ' + last; 
 
     
 
-}*/
+}

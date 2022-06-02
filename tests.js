@@ -8,7 +8,7 @@ import {
     greaterThan,
     even,
     odd,
-    /*formatName,*/
+    formatName,
 } from './functions.js';
 
 const test = QUnit.test;
@@ -210,18 +210,19 @@ test('odd numbers', (expect) => {
     existence comparison operator, if control flow
 */
 
-/*test('formats a two part name', (expect) => {
+test('formats a three part name', (expect) => {
 
     const first = 'Ruth';
     const last = 'Ginsburg';
     const middle = 'Bader';
+    const expected = 'Ruth Bader Ginsburg';
 
-    const actual = formatName(first, last);
+    const actual = formatName(first, last, middle);
 
-    expect.equal(formatName(first, last), 'Ruth Ginsburg');
-    expect.equal(formatName(first, last, middle,), 'Ruth Bader Ginsburg');
+    expect.equal(actual, expected);
+    
 
-});*/
+});
 
 /* 
     Write a function that takes a name, type, age, food, and a toys array
